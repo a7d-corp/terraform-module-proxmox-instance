@@ -2,10 +2,6 @@ variable "pve_instance_name" {
   type = string
 }
 
-variable "instance_hostname" {
-  type = string
-}
-
 variable "pve_instance_description" {
   type = string
 }
