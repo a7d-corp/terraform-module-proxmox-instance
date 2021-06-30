@@ -71,6 +71,10 @@ variable "snippet_file_base" {
   type = string
 }
 
+variable "citemplate_storage" {
+  type = string
+}
+
 variable "cloudinit_cdrom_storage" {
   type = string
 }
