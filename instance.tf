@@ -21,18 +21,14 @@ resource "proxmox_vm_qemu" "proxmox_instance" {
     size    = "10G"
   }
 
-  network {
-    model   = "virtio"
-    bridge  = var.network_bridge
-    tag     = var.primary_network_vlan_tag
-    macaddr = var.primary_mac
-  }
-
-  network {
-    model   = "virtio"
-    bridge  = var.network_bridge
-    tag     = var.secondary_network_vlan_tag
-    macaddr = var.secondary_mac
+  dynamic "network" {
+    for_each = var.network_interfaces
+    content {
+      model   = network.value.model
+      bridge  = network.value.bridge
+      tag     = network.value.tag
+      macaddr = network.value.macaddr
+    }
   }
 
   os_type                 = var.os_type
