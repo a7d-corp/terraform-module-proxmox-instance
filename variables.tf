@@ -50,24 +50,13 @@ variable "boot" {
   type = string
 }
 
-variable "network_bridge" {
-  type = string
-}
-
-variable "primary_network_vlan_tag" {
-  type = number
-}
-
-variable "primary_mac" {
-  type = string
-}
-
-variable "secondary_network_vlan_tag" {
-  type = number
-}
-
-variable "secondary_mac" {
-  type = string
+variable "network_interfaces" {
+  type = list(object({
+    model   = string
+    bridge  = string
+    tag     = number
+    macaddr = string
+  }))
 }
 
 variable "os_type" {
