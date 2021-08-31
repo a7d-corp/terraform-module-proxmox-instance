@@ -15,12 +15,6 @@ resource "proxmox_vm_qemu" "proxmox_instance" {
   memory  = var.memory
   boot    = var.boot
 
-  disk {
-    type    = "scsi"
-    storage = "local-lvm"
-    size    = "10G"
-  }
-
   dynamic "network" {
     for_each = var.network_interfaces
     content {
@@ -28,6 +22,15 @@ resource "proxmox_vm_qemu" "proxmox_instance" {
       bridge  = network.value.bridge
       tag     = network.value.tag
       macaddr = network.value.macaddr
+    }
+  }
+
+  dynamic "disk" {
+    for_each = var.disks
+    content {
+      type    = disk.value.type
+      storage = disk.value.storage
+      size    = disk.value.size
     }
   }
 
