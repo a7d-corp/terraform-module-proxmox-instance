@@ -71,6 +71,16 @@ variable "network_interfaces" {
   }))
 }
 
+variable "disks" {
+  default     = null
+  description = "List of objects representing additional disks."
+  type = list(object({
+    type    = string
+    storage = string
+    size    = string
+  }))
+}
+
 variable "os_type" {
   description = "Type of OS for preprovisioning."
   type        = string
