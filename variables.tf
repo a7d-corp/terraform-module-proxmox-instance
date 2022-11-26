@@ -14,13 +14,13 @@ variable "vmid" {
 }
 
 variable "clone" {
-  description = "Name of the template to clone."
+  description = "Name of the template to clone (ignored when pxe_boot is true)."
   type        = string
 }
 
 variable "full_clone" {
   default     = false
-  description = "Create a full clone (if false, a linked clone will be created)."
+  description = "Create a full clone; if false, a linked clone will be created (ignored when pxe_boot is true)."
   type        = bool
 }
 
@@ -53,6 +53,12 @@ variable "sockets" {
 variable "memory" {
   description = "Amount of memory to allocate."
   type        = number
+}
+
+variable "pxe_boot" {
+  default     = false
+  description = "Set PXE boot mode"
+  type        = bool
 }
 
 variable "boot" {
@@ -98,15 +104,19 @@ variable "snippet_file_base" {
   type        = string
 }
 
+variable "cicustom" {
+  description = "Path(s) to cloud-init config files (ignored when pxe_boot is true)."
+}
+
 variable "citemplate_storage" {
   default     = "local"
-  description = "Name of the storage containing the Cloudinit snippets."
+  description = "Name of the storage containing the cloud-init snippets (ignored when pxe_boot is true)."
   type        = string
 }
 
 variable "cloudinit_cdrom_storage" {
   default     = "local-lvm"
-  description = "Name of the storage to create the Cloudinit image in."
+  description = "Name of the storage to create the cloud-init image in."
   type        = string
 }
 
