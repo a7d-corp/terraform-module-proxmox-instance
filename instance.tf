@@ -3,9 +3,12 @@ resource "proxmox_vm_qemu" "proxmox_instance" {
   desc = var.pve_instance_description
   vmid = var.vmid
 
-  clone      = var.clone
-  full_clone = var.full_clone
-  agent      = var.qemu_agent
+  clone      = var.pxe_boot ? "" : var.clone
+  full_clone = var.pxe_boot ? false : var.full_clone
+  pxe_boot   = var.pxe_boot
+  boot       = var.boot
+
+  agent = var.qemu_agent
 
   target_node = var.target_node
   pool        = var.resource_pool
@@ -13,7 +16,6 @@ resource "proxmox_vm_qemu" "proxmox_instance" {
   cores   = var.cores
   sockets = var.sockets
   memory  = var.memory
-  boot    = var.boot
 
   dynamic "network" {
     for_each = var.network_interfaces
@@ -34,9 +36,10 @@ resource "proxmox_vm_qemu" "proxmox_instance" {
     }
   }
 
-  os_type                 = var.os_type
-  cicustom                = "user=${var.citemplate_storage}:${var.snippet_dir}/user-${var.snippet_file_base},network=${var.citemplate_storage}:${var.snippet_dir}/network-${var.snippet_file_base}"
-  cloudinit_cdrom_storage = var.cloudinit_cdrom_storage
+  os_type  = var.os_type
+  cicustom = var.pxe_boot ? "" : var.cicustom
+  # example: "user=${var.citemplate_storage}:${var.snippet_dir}/user-${var.snippet_file_base},network=${var.citemplate_storage}:${var.snippet_dir}/network-${var.snippet_file_base}"
+  cloudinit_cdrom_storage = var.pxe_boot ? "" : var.cloudinit_cdrom_storage
 
   searchdomain = var.searchdomain
   nameserver   = var.nameserver
