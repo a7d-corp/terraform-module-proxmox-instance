@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Removed
+
+- Remove feature toggle for experimental attributes.
+
 ## [1.0.0] - 2022-11-26
 
 ### Added
