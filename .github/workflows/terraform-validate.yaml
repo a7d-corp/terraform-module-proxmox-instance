@@ -13,4 +13,4 @@ jobs:
     - uses: hashicorp/setup-terraform@v2
     - run: terraform init
     - id: validate
-      run: terraform validate --no-color
+      run: terraform validate -no-color
