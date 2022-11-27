@@ -14,6 +14,7 @@ variable "vmid" {
 }
 
 variable "clone" {
+  default     = ""
   description = "Name of the template to clone (ignored when pxe_boot is true)."
   type        = string
 }
@@ -88,6 +89,7 @@ variable "disks" {
 }
 
 variable "os_type" {
+  default     = ""
   description = "Type of OS for preprovisioning."
   type        = string
 }
@@ -105,7 +107,9 @@ variable "snippet_file_base" {
 }
 
 variable "cicustom" {
+  default     = ""
   description = "Path(s) to cloud-init config files (ignored when pxe_boot is true)."
+  type        = string
 }
 
 variable "citemplate_storage" {
