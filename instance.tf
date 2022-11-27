@@ -5,7 +5,7 @@ resource "proxmox_vm_qemu" "proxmox_instance" {
 
   clone      = var.pxe_boot ? "" : var.clone
   full_clone = var.pxe_boot ? false : var.full_clone
-  pxe_boot   = var.pxe_boot
+  pxe        = var.pxe_boot
   boot       = var.boot
 
   agent = var.qemu_agent
