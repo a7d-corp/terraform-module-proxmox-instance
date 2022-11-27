@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.2.0] - 2022-11-27
+
 ### Changed
 
 - Make vars not required for PXE booting optional.
@@ -36,6 +38,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Enable configuration of PXE booting.
 
-[Unreleased]: https://github.com/a7d-corp/terraform-module-proxmox-instance/compare/v1.1.0...HEAD
+[Unreleased]: https://github.com/a7d-corp/terraform-module-proxmox-instance/compare/v1.2.0...HEAD
+[1.2.0]: https://github.com/a7d-corp/terraform-module-proxmox-instance/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/a7d-corp/terraform-module-proxmox-instance/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/a7d-corp/terraform-module-proxmox-instance/releases/tag/v1.0.0
