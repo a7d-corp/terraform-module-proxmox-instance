@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Make vars not required for PXE booting optional.
+
 ## [1.1.0] - 2022-11-27
 
 ### Fixed
