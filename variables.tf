@@ -123,18 +123,3 @@ variable "cloudinit_cdrom_storage" {
   description = "Name of the storage to create the cloud-init image in (e.g. local-lvm)."
   type        = string
 }
-
-variable "instance_domain" {
-  description = "Domain name to use."
-  type        = string
-}
-
-variable "searchdomain" {
-  description = "DNS searchdomain to use."
-  type        = string
-}
-
-variable "nameserver" {
-  description = "Nameserver to use in the instance."
-  type        = string
-}
