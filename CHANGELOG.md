@@ -17,12 +17,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.2.2] - 2022-11-27
 
+### Fixed
+
+- Use null vars instead of strings.
+
 ## [1.2.1] - 2022-11-27
 
 ### Fixed
 
 - Correct conditional logic.
-- Use null vars instead of strings.
 
 ## [1.2.0] - 2022-11-27
 
