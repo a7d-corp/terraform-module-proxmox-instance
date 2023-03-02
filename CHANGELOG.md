@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Ability to set Proxmox HA options.
+
 ## [1.3.0] - 2022-12-03
 
 ### Added

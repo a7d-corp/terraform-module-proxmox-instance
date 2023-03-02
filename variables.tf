@@ -41,6 +41,29 @@ variable "resource_pool" {
   type        = string
 }
 
+variable "hastate" {
+  default     = null
+  description = "Requested HA state for the resource."
+  type        = string
+  validation {
+    condition = anytrue([
+      var.hastate == "disabled",
+      var.hastate == "enabled",
+      var.hastate == "ignored",
+      var.hastate == "started",
+      var.hastate == "stopped",
+      var.hastate == null
+    ])
+    error_message = "Must be one of 'disabled', 'enabled', 'ignored', 'started', 'stopped', or null (default)."
+  }
+}
+
+variable "hagroup" {
+  default     = null
+  description = "The HA group identifier the resource belongs to."
+  type        = string
+}
+
 variable "cores" {
   description = "Number of cores to allocate."
   type        = number

@@ -13,6 +13,9 @@ resource "proxmox_vm_qemu" "proxmox_instance" {
   target_node = var.target_node
   pool        = var.resource_pool
 
+  hastate = var.hastate
+  hagroup = var.hagroup
+
   cores   = var.cores
   sockets = var.sockets
   memory  = var.memory
