@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.4.0] - 2023-03-02
+
 ### Added
 
 - Ability to set Proxmox HA options.
@@ -64,7 +66,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Enable configuration of PXE booting.
 
-[Unreleased]: https://github.com/a7d-corp/terraform-module-proxmox-instance/compare/v1.3.0...HEAD
+[Unreleased]: https://github.com/a7d-corp/terraform-module-proxmox-instance/compare/v1.4.0...HEAD
+[1.4.0]: https://github.com/a7d-corp/terraform-module-proxmox-instance/compare/v1.3.0...v1.4.0
 [1.3.0]: https://github.com/a7d-corp/terraform-module-proxmox-instance/compare/v1.2.2...v1.3.0
 [1.2.2]: https://github.com/a7d-corp/terraform-module-proxmox-instance/compare/v1.2.1...v1.2.2
 [1.2.1]: https://github.com/a7d-corp/terraform-module-proxmox-instance/compare/v1.2.0...v1.2.1
