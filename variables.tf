@@ -80,7 +80,7 @@ variable "memory" {
 }
 
 variable "pxe_boot" {
-  default     = false
+  default     = null
   description = "Set PXE boot mode"
   type        = bool
 }

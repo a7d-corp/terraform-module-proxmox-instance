@@ -25,7 +25,7 @@ This module is an opinionated take on creating a VM in Proxmox; not all possible
 | os_type | Type of OS for preprovisioning. | `string` | `null` | no |
 | pve_instance_description | Description of the instance. | `string` | n/a | yes |
 | pve_instance_name | Name of the instance. | `string` | n/a | yes |
-| pxe_boot | Set PXE boot mode | `bool` | `false` | no |
+| pxe_boot | Set PXE boot mode | `bool` | `null` | no |
 | qemu_agent | Enable QEMU guest agent (must be installed in the template). Set to `1` to enable or `0` to disable. | `number` | `0` | no |
 | resource_pool | Name of the resource pool the assign the instance to. | `string` | n/a | yes |
 | snippet_dir | Name of the snippet subdirectory. | `string` | `"snippets"` | no |
