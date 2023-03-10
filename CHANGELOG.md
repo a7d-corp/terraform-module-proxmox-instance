@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.5.0] - 2023-03-10
+
 ### Removed
 
 - Removed unused vars relating to cloud-init.
@@ -76,7 +78,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Enable configuration of PXE booting.
 
-[Unreleased]: https://github.com/a7d-corp/terraform-module-proxmox-instance/compare/v1.4.1...HEAD
+[Unreleased]: https://github.com/a7d-corp/terraform-module-proxmox-instance/compare/v1.5.0...HEAD
+[1.5.0]: https://github.com/a7d-corp/terraform-module-proxmox-instance/compare/v1.4.1...v1.5.0
 [1.4.1]: https://github.com/a7d-corp/terraform-module-proxmox-instance/compare/v1.4.0...v1.4.1
 [1.4.0]: https://github.com/a7d-corp/terraform-module-proxmox-instance/compare/v1.3.0...v1.4.0
 [1.3.0]: https://github.com/a7d-corp/terraform-module-proxmox-instance/compare/v1.2.2...v1.3.0
