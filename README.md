@@ -12,7 +12,6 @@ This module is an opinionated take on creating a VM in Proxmox; not all possible
 |------|-------------|------|---------|:--------:|
 | boot | Boot order for the instance. | `string` | `"cdn"` | no |
 | cicustom | Path(s) to cloud-init config files (ignored when pxe_boot is true). | `string` | `null` | no |
-| citemplate_storage | Name of the storage containing the cloud-init snippets (ignored when pxe_boot is true). | `string` | `null` | no |
 | clone | Name of the template to clone (ignored when pxe_boot is true). | `string` | `null` | no |
 | cloudinit_cdrom_storage | Name of the storage to create the cloud-init image in (e.g. local-lvm). | `string` | `null` | no |
 | cores | Number of cores to allocate. | `number` | n/a | yes |
@@ -28,8 +27,6 @@ This module is an opinionated take on creating a VM in Proxmox; not all possible
 | pxe_boot | Set PXE boot mode | `bool` | `null` | no |
 | qemu_agent | Enable QEMU guest agent (must be installed in the template). Set to `1` to enable or `0` to disable. | `number` | `0` | no |
 | resource_pool | Name of the resource pool the assign the instance to. | `string` | n/a | yes |
-| snippet_dir | Name of the snippet subdirectory. | `string` | `"snippets"` | no |
-| snippet_file_base | Path to the directory containing the snippet_dir. | `string` | `"/var/lib/vz"` | no |
 | sockets | Number of sockets to allocate. | `number` | n/a | yes |
 | target_node | Name of the node to assign the instance to. | `string` | n/a | yes |
 | vmid | ID of the VM (must be unique). | `number` | n/a | yes |
