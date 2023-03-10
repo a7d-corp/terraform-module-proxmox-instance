@@ -41,6 +41,6 @@ resource "proxmox_vm_qemu" "proxmox_instance" {
 
   os_type  = var.pxe_boot == true ? null : var.os_type
   cicustom = var.pxe_boot == true ? null : var.cicustom
-  # example: "user=${var.citemplate_storage}:${var.snippet_dir}/user-${var.snippet_file_base},network=${var.citemplate_storage}:${var.snippet_dir}/network-${var.snippet_file_base}"
+  # example: "user=${local.citemplate_storage}:${local.snippet_dir}/user-${local.snippet_file_base},network=${local.citemplate_storage}:${local.snippet_dir}/network-${local.snippet_file_base}"
   cloudinit_cdrom_storage = var.pxe_boot == true ? null : var.cloudinit_cdrom_storage
 }

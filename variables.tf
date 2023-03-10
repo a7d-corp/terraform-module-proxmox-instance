@@ -117,27 +117,9 @@ variable "os_type" {
   type        = string
 }
 
-variable "snippet_dir" {
-  default     = "snippets"
-  description = "Name of the snippet subdirectory."
-  type        = string
-}
-
-variable "snippet_file_base" {
-  default     = "/var/lib/vz"
-  description = "Path to the directory containing the snippet_dir."
-  type        = string
-}
-
 variable "cicustom" {
   default     = null
   description = "Path(s) to cloud-init config files (ignored when pxe_boot is true)."
-  type        = string
-}
-
-variable "citemplate_storage" {
-  default     = null
-  description = "Name of the storage containing the cloud-init snippets (ignored when pxe_boot is true)."
   type        = string
 }
 
