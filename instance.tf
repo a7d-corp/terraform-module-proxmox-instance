@@ -5,8 +5,11 @@ resource "proxmox_vm_qemu" "proxmox_instance" {
 
   clone      = var.pxe_boot == true ? null : var.clone
   full_clone = var.pxe_boot == true ? null : var.full_clone
-  pxe        = var.pxe_boot
-  boot       = var.boot
+
+  pxe      = var.pxe_boot
+  boot     = var.boot
+  onboot   = var.onboot
+  oncreate = var.oncreate
 
   agent = var.qemu_agent
 
