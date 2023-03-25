@@ -86,7 +86,7 @@ variable "pxe_boot" {
 }
 
 variable "boot" {
-  default     = "cdn"
+  default     = "order=scsi0;net0"
   description = "Boot order for the instance."
   type        = string
 }

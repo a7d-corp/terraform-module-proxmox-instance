@@ -10,7 +10,7 @@ This module is an opinionated take on creating a VM in Proxmox; not all possible
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| boot | Boot order for the instance. | `string` | `"cdn"` | no |
+| boot | Boot order for the instance. | `string` | `"order=scsi0;net0"` | no |
 | cicustom | Path(s) to cloud-init config files (ignored when pxe_boot is true). | `string` | `null` | no |
 | clone | Name of the template to clone (ignored when pxe_boot is true). | `string` | `null` | no |
 | cloudinit_cdrom_storage | Name of the storage to create the cloud-init image in (e.g. local-lvm). | `string` | `null` | no |
