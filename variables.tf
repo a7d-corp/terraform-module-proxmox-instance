@@ -91,6 +91,18 @@ variable "boot" {
   type        = string
 }
 
+variable "onboot" {
+  default     = null
+  description = "Whether to have the VM startup after the PVE node starts."
+  type        = bool
+}
+
+variable "oncreate" {
+  default     = null
+  description = "Whether to have the VM startup after the VM is created."
+  type        = bool
+}
+
 variable "network_interfaces" {
   description = "List of objects representing instance interface configuration."
   type = list(object({
