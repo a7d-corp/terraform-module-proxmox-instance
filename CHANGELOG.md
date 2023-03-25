@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Bump proxmox provider to `2.9.14` to take advantage of new PXE options.
+- Use new boot order syntax.
 
 ## [1.5.0] - 2023-03-10
 
