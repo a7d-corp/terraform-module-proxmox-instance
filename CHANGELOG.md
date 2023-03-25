@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.6.0] - 2023-03-25
+
 ### Added
 
 - Exposed `onboot` and `oncreate` options.
@@ -87,7 +89,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Enable configuration of PXE booting.
 
-[Unreleased]: https://github.com/a7d-corp/terraform-module-proxmox-instance/compare/v1.5.0...HEAD
+[Unreleased]: https://github.com/a7d-corp/terraform-module-proxmox-instance/compare/v1.6.0...HEAD
+[1.6.0]: https://github.com/a7d-corp/terraform-module-proxmox-instance/compare/v1.5.0...v1.6.0
 [1.5.0]: https://github.com/a7d-corp/terraform-module-proxmox-instance/compare/v1.4.1...v1.5.0
 [1.4.1]: https://github.com/a7d-corp/terraform-module-proxmox-instance/compare/v1.4.0...v1.4.1
 [1.4.0]: https://github.com/a7d-corp/terraform-module-proxmox-instance/compare/v1.3.0...v1.4.0
