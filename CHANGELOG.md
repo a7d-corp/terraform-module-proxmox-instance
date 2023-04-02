@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Replace deprecated `oncreate` option with `vm_state`.
+
 ## [1.6.0] - 2023-03-25
 
 ### Added
