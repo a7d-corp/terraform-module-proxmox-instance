@@ -30,5 +30,5 @@ This module is an opinionated take on creating a VM in Proxmox; not all possible
 | resource_pool | Name of the resource pool the assign the instance to. | `string` | n/a | yes |
 | sockets | Number of sockets to allocate. | `number` | n/a | yes |
 | target_node | Name of the node to assign the instance to. | `string` | n/a | yes |
-| vm_state | Whether to have the VM startup after the VM is created. | `bool` | `null` | no |
+| vm_state | Whether to have the VM startup after the VM is created. | `string` | `null` | no |
 | vmid | ID of the VM (must be unique). | `number` | n/a | yes |

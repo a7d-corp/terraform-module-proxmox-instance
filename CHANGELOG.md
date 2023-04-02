@@ -13,6 +13,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Replace deprecated `oncreate` option with `vm_state`.
 
+### Fixed
+
+- Correct `vm_state` variable type.
+
 ## [1.6.0] - 2023-03-25
 
 ### Added
