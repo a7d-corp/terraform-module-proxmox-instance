@@ -9,7 +9,7 @@ resource "proxmox_vm_qemu" "proxmox_instance" {
   pxe      = var.pxe_boot
   boot     = var.boot
   onboot   = var.onboot
-  oncreate = var.oncreate
+  vm_state = var.vm_state
 
   agent = var.qemu_agent
 
