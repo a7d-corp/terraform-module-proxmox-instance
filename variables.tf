@@ -100,7 +100,7 @@ variable "onboot" {
 variable "vm_state" {
   default     = null
   description = "Whether to have the VM startup after the VM is created."
-  type        = bool
+  type        = string
 }
 
 variable "network_interfaces" {
