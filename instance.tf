@@ -19,6 +19,7 @@ resource "proxmox_vm_qemu" "proxmox_instance" {
   hastate = var.hastate
   hagroup = var.hagroup
 
+  cpu     = var.cpu
   cores   = var.cores
   sockets = var.sockets
   memory  = var.memory
