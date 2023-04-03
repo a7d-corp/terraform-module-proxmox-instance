@@ -22,6 +22,7 @@ This module is an opinionated take on creating a VM in Proxmox; not all possible
 | memory | Amount of memory to allocate. | `number` | n/a | yes |
 | network_interfaces | List of objects representing instance interface configuration. | <pre>list(object({<br>    model   = string<br>    bridge  = string<br>    tag     = number<br>    macaddr = string<br>  }))</pre> | n/a | yes |
 | onboot | Whether to have the VM startup after the PVE node starts. | `bool` | `null` | no |
+| oncreate | Whether to have the VM startup after the VM is created. | `bool` | `null` | no |
 | os_type | Type of OS for preprovisioning. | `string` | `null` | no |
 | pve_instance_description | Description of the instance. | `string` | n/a | yes |
 | pve_instance_name | Name of the instance. | `string` | n/a | yes |
@@ -30,5 +31,4 @@ This module is an opinionated take on creating a VM in Proxmox; not all possible
 | resource_pool | Name of the resource pool the assign the instance to. | `string` | n/a | yes |
 | sockets | Number of sockets to allocate. | `number` | n/a | yes |
 | target_node | Name of the node to assign the instance to. | `string` | n/a | yes |
-| vm_state | Whether to have the VM startup after the VM is created. | `string` | `null` | no |
 | vmid | ID of the VM (must be unique). | `number` | n/a | yes |
