@@ -64,6 +64,12 @@ variable "hagroup" {
   type        = string
 }
 
+variable "cpu" {
+  default     = null
+  description = "The type of CPU to emulate in the guest."
+  type        = string
+}
+
 variable "cores" {
   description = "Number of cores to allocate."
   type        = number

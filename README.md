@@ -15,6 +15,7 @@ This module is an opinionated take on creating a VM in Proxmox; not all possible
 | clone | Name of the template to clone (ignored when pxe_boot is true). | `string` | `null` | no |
 | cloudinit_cdrom_storage | Name of the storage to create the cloud-init image in (e.g. local-lvm). | `string` | `null` | no |
 | cores | Number of cores to allocate. | `number` | n/a | yes |
+| cpu | The type of CPU to emulate in the guest. | `string` | `null` | no |
 | disks | List of objects representing additional disks. | <pre>list(object({<br>    type    = string<br>    storage = string<br>    size    = string<br>  }))</pre> | `null` | no |
 | full_clone | Create a full clone; if false, a linked clone will be created (ignored when pxe_boot is true). | `bool` | `null` | no |
 | hagroup | The HA group identifier the resource belongs to. | `string` | `null` | no |
