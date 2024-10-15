@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Update `proxmox` provider to `3.0.1-rc4`.
+- Refactor disks implementation for upstream provider.
+
 ## [1.8.0] - 2023-04-03
 
 ### Added
