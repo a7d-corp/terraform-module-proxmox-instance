@@ -129,14 +129,7 @@ variable "disks" {
     slot       = string
     storage    = string
   }))
-  default = [{
-    discard    = false
-    emulatessd = false
-    iothread   = false
-    size       = "20G"
-    slot       = "scsi0"
-    storage    = "local-lvm"
-  }]
+  default = []
 }
 
 variable "os_type" {
