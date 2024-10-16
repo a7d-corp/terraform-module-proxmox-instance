@@ -122,20 +122,20 @@ variable "network_interfaces" {
 variable "disks" {
   description = "List of objects representing additional disks."
   type = list(object({
+    discard    = optional(bool)
+    emulatessd = optional(bool)
+    iothread   = optional(bool)
+    size       = optional(string)
     slot       = string
-    size       = string
     storage    = string
-    emulatessd = bool
-    iothread   = bool
-    discard    = bool
   }))
   default = [{
-    slot       = "scsi0"
-    size       = "20G"
-    storage    = "local-lvm"
+    discard    = false
     emulatessd = false
     iothread   = false
-    discard    = false
+    size       = "20G"
+    slot       = "scsi0"
+    storage    = "local-lvm"
   }]
 }
 
