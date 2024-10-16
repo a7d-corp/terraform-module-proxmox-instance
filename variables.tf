@@ -126,8 +126,9 @@ variable "disks" {
     emulatessd = optional(bool)
     iothread   = optional(bool)
     size       = optional(string)
-    slot       = string
+    slot       = optional(string)
     storage    = string
+    type       = string
   }))
   default = []
 }
