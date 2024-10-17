@@ -43,7 +43,7 @@ This module is an opinionated take on creating a VM in Proxmox; not all possible
 | cicustom | Path(s) to cloud-init config files (ignored when pxe_boot is true). | `string` | no |
 | clone | Name of the template to clone (ignored when pxe_boot is true). | `string` | no |
 | cpu | The type of CPU to emulate in the guest. | `string` | no |
-| disks | List of objects representing additional disks. | <pre>list(object({<br>    slot       = string<br>    size       = string<br>    storage    = string<br>    emulatessd = bool<br>    iothread   = bool<br>    discard    = bool<br>  }))</pre> | no |
+| disks | List of objects representing additional disks. | <pre>list(object({<br>    discard    = optional(bool)<br>    emulatessd = optional(bool)<br>    iothread   = optional(bool)<br>    size       = optional(string)<br>    slot       = optional(string)<br>    storage    = string<br>    type       = string<br>  }))</pre> | no |
 | full_clone | Create a full clone; if false, a linked clone will be created (ignored when pxe_boot is true). | `bool` | no |
 | hagroup | The HA group identifier the resource belongs to. | `string` | no |
 | hastate | Requested HA state for the resource. | `string` | no |
