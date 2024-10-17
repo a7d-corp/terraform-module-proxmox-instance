@@ -11,14 +11,14 @@ This module is an opinionated take on creating a VM in Proxmox; not all possible
 
 | Name | Version |
 |------|---------|
-| terraform | >= 0.14.0 |
-| proxmox | >= 2.9.14 |
+| terraform | >= 1.3.0 |
+| proxmox | >= 3.0.1-rc4 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| proxmox | 2.9.11 |
+| proxmox | 2.9.13 |
 
 ## Resources
 
@@ -42,15 +42,14 @@ This module is an opinionated take on creating a VM in Proxmox; not all possible
 | boot | Boot order for the instance. | `string` | no |
 | cicustom | Path(s) to cloud-init config files (ignored when pxe_boot is true). | `string` | no |
 | clone | Name of the template to clone (ignored when pxe_boot is true). | `string` | no |
-| cloudinit_cdrom_storage | Name of the storage to create the cloud-init image in (e.g. local-lvm). | `string` | no |
 | cpu | The type of CPU to emulate in the guest. | `string` | no |
-| disks | List of objects representing additional disks. | <pre>list(object({<br>    type    = string<br>    storage = string<br>    size    = string<br>  }))</pre> | no |
+| disks | List of objects representing additional disks. | <pre>list(object({<br>    discard    = optional(bool)<br>    emulatessd = optional(bool)<br>    iothread   = optional(bool)<br>    size       = optional(string)<br>    slot       = optional(string)<br>    storage    = string<br>    type       = string<br>  }))</pre> | no |
 | full_clone | Create a full clone; if false, a linked clone will be created (ignored when pxe_boot is true). | `bool` | no |
 | hagroup | The HA group identifier the resource belongs to. | `string` | no |
 | hastate | Requested HA state for the resource. | `string` | no |
 | onboot | Whether to have the VM startup after the PVE node starts. | `bool` | no |
-| oncreate | Whether to have the VM startup after the VM is created. | `bool` | no |
 | os_type | Type of OS for preprovisioning. | `string` | no |
 | pxe_boot | Set PXE boot mode | `bool` | no |
 | qemu_agent | Enable QEMU guest agent (must be installed in the template). Set to `1` to enable or `0` to disable. | `number` | no |
+| vm_state | Desired power state of the VM. | `string` | no |
 <!-- END_TF_DOCS -->

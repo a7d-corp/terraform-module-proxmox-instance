@@ -103,10 +103,10 @@ variable "onboot" {
   type        = bool
 }
 
-variable "oncreate" {
-  default     = null
-  description = "Whether to have the VM startup after the VM is created."
-  type        = bool
+variable "vm_state" {
+  default     = "running"
+  description = "Desired power state of the VM."
+  type        = string
 }
 
 variable "network_interfaces" {
@@ -120,13 +120,17 @@ variable "network_interfaces" {
 }
 
 variable "disks" {
-  default     = null
   description = "List of objects representing additional disks."
   type = list(object({
-    type    = string
-    storage = string
-    size    = string
+    discard    = optional(bool)
+    emulatessd = optional(bool)
+    iothread   = optional(bool)
+    size       = optional(string)
+    slot       = optional(string)
+    storage    = string
+    type       = string
   }))
+  default = []
 }
 
 variable "os_type" {
@@ -138,11 +142,5 @@ variable "os_type" {
 variable "cicustom" {
   default     = null
   description = "Path(s) to cloud-init config files (ignored when pxe_boot is true)."
-  type        = string
-}
-
-variable "cloudinit_cdrom_storage" {
-  default     = null
-  description = "Name of the storage to create the cloud-init image in (e.g. local-lvm)."
   type        = string
 }
