@@ -40,6 +40,7 @@ resource "proxmox_vm_qemu" "proxmox_instance" {
     content {
       discard    = disk.value.discard
       emulatessd = disk.value.emulatessd
+      format     = disk.value.format
       iothread   = disk.value.iothread
       size       = disk.value.size
       slot       = disk.value.slot

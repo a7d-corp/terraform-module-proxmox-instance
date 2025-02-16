@@ -130,6 +130,7 @@ variable "disks" {
   type = list(object({
     discard    = optional(bool)
     emulatessd = optional(bool)
+    format     = optional(string)
     iothread   = optional(bool)
     size       = optional(string)
     slot       = optional(string)
