@@ -23,6 +23,7 @@ resource "proxmox_vm_qemu" "proxmox_instance" {
   cores   = var.cores
   sockets = var.sockets
   memory  = var.memory
+  scsihw  = var.scsihw
 
   dynamic "network" {
     for_each = var.network_interfaces

@@ -85,6 +85,12 @@ variable "memory" {
   type        = number
 }
 
+variable "scsihw" {
+  default     = "virtio-scsi-single"
+  description = "SCSI controller to emulate."
+  type        = string
+}
+
 variable "pxe_boot" {
   default     = null
   description = "Set PXE boot mode"
