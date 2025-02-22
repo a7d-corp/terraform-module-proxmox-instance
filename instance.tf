@@ -23,6 +23,7 @@ resource "proxmox_vm_qemu" "proxmox_instance" {
   cores   = var.cores
   sockets = var.sockets
   memory  = var.memory
+  scsihw  = var.scsihw
 
   dynamic "network" {
     for_each = var.network_interfaces
@@ -39,6 +40,7 @@ resource "proxmox_vm_qemu" "proxmox_instance" {
     content {
       discard    = disk.value.discard
       emulatessd = disk.value.emulatessd
+      format     = disk.value.format
       iothread   = disk.value.iothread
       size       = disk.value.size
       slot       = disk.value.slot
