@@ -104,7 +104,7 @@ variable "boot" {
 }
 
 variable "onboot" {
-  default     = null
+  default     = true
   description = "Whether to have the VM startup after the PVE node starts."
   type        = bool
 }
